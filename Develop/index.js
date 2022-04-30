@@ -35,11 +35,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'What is the title for this project?'
-    },
-    {
-        type: 'input',
         name: 'credits',
         message: 'With whom did you collaborate on this project?'
     },
@@ -85,7 +80,10 @@ const questions = [
         name: 'repo',
         message: 'What is the GitHub repository URL for your project?'
     },
+    
 ];
+
+console.log(questions)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}

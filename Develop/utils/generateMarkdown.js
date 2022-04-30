@@ -28,10 +28,36 @@ function generateMarkdown(data) {
 *** [URL] (#URL)
 *** [Repository] (#Repository)
 
+# Installation
+
+${data.install}
+
+# Usage
+
+${data.usage}
+
+# Credits
+
+${data.credits}
+
+# License
+
+${data.license}
+
+# Developer
+
+This project was developed by ${data.developer} known as ${data.userName} who can be reached at <${data.userEmail}>
+
+# URL
+
+The live link to the project is at <${data.liveURL}
+
+# Repository
+
+The repository for this project can be seen at <${data.repo}
+
 
 `;
-}
-
-
+};
 
 module.exports = generateMarkdown;

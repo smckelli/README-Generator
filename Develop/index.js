@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -39,7 +40,7 @@ const questions = [
         message: 'With whom did you collaborate on this project?'
     },
     {
-        type: 'list',
+        type: 'checkbox',
         name: 'license',
         message: 'What license did you use for your project?',
         choices: [
@@ -84,18 +85,46 @@ const questions = [
     
 ];
 
-console.log(questions)
+// console.log(questions)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('./README.md', data, err => {
+    fs.writeFile(fileName, data, err => {
         if (err) throw err
         console.log('File saved!')
     })
 }
 
+
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then(answers => {
+    console.log(answers)
+        const data = 
+        {
+            title: answers.title,
+            descOver: answers.descOver,
+            descMot: answers.descMot,
+            descLearn: answers.descLearn,
+            install: answers.install,
+            usage: answers.usage,
+            credits: answers.credits,
+            license: answers.license,
+            developer: answers.developer,
+            userName: answers.userName,
+            userEmail: answers.userEmail,
+            liveURL: answers.liveURL,
+            repo: answers.repo
+        }
+    console.log(data)
+    const output = generateMarkdown(data);
+    writeToFile('./generated/README.md', output)
+    })
+}
+
+
 
 // Function call to initialize app
 init();

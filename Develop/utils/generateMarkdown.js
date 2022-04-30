@@ -32,7 +32,14 @@ const licenseBadge = (license) => {
     else if (license === "Mozilla") {
       return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
     }
+};
 
+const licenseSection = (license) => {
+  if (license === "None") {
+    return "This project is not covered under any license.";
+  } else {
+    return `${licenseBadge(license)} This project is covered under the ${license} license. For more information regarding this license, please click the badge.`;
+  }
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -42,7 +49,7 @@ function generateMarkdown(data) {
 
   ${data.descOver} ${data.descMot} ${data.descLearn}
 
-  ## Table of Contents
+  # Table of Contents
 
 *** [Installation] (#Installation)
 *** [Usage] (#Usage)
@@ -66,7 +73,7 @@ ${data.credits}
 
 # License
 
-${data.license}
+${licenseSection()}
 
 # Developer
 

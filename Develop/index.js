@@ -43,6 +43,7 @@ const questions = [
         name: 'license',
         message: 'What license did you use for your project?',
         choices: [
+            'None',
             'MIT',
             'Apache 2.0',
             'GNU (GPL) 2.0',

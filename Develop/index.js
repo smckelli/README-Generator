@@ -1,6 +1,11 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generated = require('./utils/generateMarkdown.js')
+var myLicense;
+
+
+
 
 
 // TODO: Create an array of questions for user input
@@ -89,7 +94,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+    fs.writeFile('./README.md', data, err => {
         if (err) throw err
         console.log('File saved!')
     })
@@ -101,7 +106,7 @@ function init() {
     inquirer
     .prompt(questions)
     .then(answers => {
-    console.log(answers)
+    // console.log(answers)
         const data = 
         {
             title: answers.title,
@@ -118,11 +123,13 @@ function init() {
             liveURL: answers.liveURL,
             repo: answers.repo
         }
-    console.log(data)
-    const output = generateMarkdown(data);
-    writeToFile('./generated/README.md', output)
+    console.log(data.license)
+    const output = generated(data);
+    writeToFile('./README.md', output)
     })
 }
+
+
 
 
 

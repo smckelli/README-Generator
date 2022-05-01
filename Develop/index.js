@@ -123,7 +123,7 @@ function init() {
             liveURL: answers.liveURL,
             repo: answers.repo
         }
-    console.log(data.license)
+    // console.log(data.license)
     const output = generated(data);
     writeToFile('./README.md', output)
     })

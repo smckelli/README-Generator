@@ -1,20 +1,20 @@
 
   
-  # 1
+  # README Generator
 
-  2 3 4
+  This project auto generates a README file for your project. I wanted to develop a tool to help make project development easier. I learned how to use node.js and command line javaScript.
 
 # Installation
 
-5
+Go to the Github site for this project and clone it down.
 
 # Usage
 
-6
+On the command line in the proper folder type 'node index'.
 
 # Credits
 
-7
+I wish I could have collaborated with anyone on this project. This is all me.
 
 # License
 
@@ -22,13 +22,13 @@ None
 
 # Developer
 
-This project was developed by 9, known as 10, who can be reached at <11>
+This project was developed by Scott mcKellps, known as smckelli, who can be reached at <smckelli@gmail.com>
 
 # URL
 
-The live link to the project is at <12>
+The live link to the project is at < https://smckelli.github.io/readme-generator/>
 
 # Repository
 
-The repository for this project can be seen at <13>
+The repository for this project can be seen at <https://github.com/smckelli/readme-generator>
 

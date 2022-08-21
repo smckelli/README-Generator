@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generated = require('./utils/generateMarkdown.js')
-var myLicense;
+// var myLicense;
 
 
 
@@ -59,7 +59,7 @@ const questions = [
             'Artistic 2.0',
             'Perl',
             'Boost',
-            'Mozilla',
+            'Mozilla (MPL)',
         ],
     },
     {
@@ -70,7 +70,7 @@ const questions = [
     {
         type: 'input',
         name: 'userName',
-        message: 'What is your username?'
+        message: 'What is your GitHub username?'
     },
     {
         type: 'input',
@@ -94,7 +94,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('./README.md', data, err => {
+    fs.writeFile('./dist/README.md', data, err => {
         if (err) throw err
         console.log('File saved!')
     })
@@ -125,7 +125,7 @@ function init() {
         }
     // console.log(data.license)
     const output = generated(data);
-    writeToFile('./README.md', output)
+    writeToFile('./dist/README.md', output)
     })
 }
 

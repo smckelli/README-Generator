@@ -65,7 +65,7 @@ ${data.usage}
 
 ${data.credits}
 
-${licenseSection(response.license)}
+${licenseSection(data.license)}
 
 # Developer
 

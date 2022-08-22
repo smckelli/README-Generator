@@ -51,7 +51,7 @@ function generateMarkdown(data) {
   
   # ${data.title}
 
-  ${showBadge(response.license)}
+  ${showBadge(data.license)}
 
   ${data.descOver} ${data.descMot} ${data.descLearn}
 

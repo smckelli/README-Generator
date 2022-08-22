@@ -38,18 +38,20 @@ const licenseSection = (license) => {
   }
 };
 
-const showLicense = (license) => {
-  if (license === "none") return "";
-  else {
-    return `* [License](#license)`;
-  }
-};
+// const showLicense = (license) => {
+//   if (license === "none") return "";
+//   else {
+//     return `* [License](#license)`;
+//   }
+// };
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   
   # ${data.title}
+
+  ${showBadge(response.license)}
 
   ${data.descOver} ${data.descMot} ${data.descLearn}
 

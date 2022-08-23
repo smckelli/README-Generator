@@ -45,7 +45,7 @@ const questions = [
         message: 'With whom did you collaborate on this project?'
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'What license did you use for your project?',
         choices: [

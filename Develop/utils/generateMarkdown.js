@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 const showBadge = (license) => {
-  if (license === "none") {
+  if (license === "None") {
     return "";
   } else if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
@@ -28,22 +28,22 @@ const showBadge = (license) => {
 };
 
 const licenseSection = (license) => {
-  if (license === "none") {
+  if (license === "None") {
     return " ";
   } else {
-    return `## [License](#table-of-contents)
-  this project is covered under the ${license} license. For more information click here ${showBadge(
+    return `# License
+  This project is covered under the ${license} license. For more information click here ${showBadge(
       license
     )}.`;
   }
 };
 
-// const showLicense = (license) => {
-//   if (license === "none") return "";
-//   else {
-//     return `* [License](#license)`;
-//   }
-// };
+const showLicense = (license) => {
+  if (license === "none") return "";
+  else {
+    return `* [License](#license)`;
+  }
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
